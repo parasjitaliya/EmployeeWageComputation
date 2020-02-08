@@ -12,6 +12,10 @@ then
 elif [ $random_num=2 ]
 then
 	echo "yes,this half-day employee is not present"
+	Wage_per_hour=20
+	Parttime_hour=8
+	Parttime_Wage=$((Wage_per_hour * Parttime_hour))
+	echo "Parttime_Wage=" $Parttime_Wage
 else
 	echo "this employee is not present"
 
