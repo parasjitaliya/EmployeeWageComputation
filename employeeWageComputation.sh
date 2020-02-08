@@ -20,3 +20,31 @@ else
 	echo "this employee is not present"
 
 fi	
+
+echo "solving using case statement"
+while :
+do 
+  read Employee_Id
+  case $Employee_Id in 
+	1)
+		echo "yes,this full-day employee is present"
+        	Wage_per_hour=20
+        	Day_Hour=8
+        	Daily_Wage=$((Wage_per_hour * Day_Hour))
+        	echo "Daily_Wage=" $Daily_Wage
+		break
+		;;
+	2)
+		echo "yes,this half-day employee is not present"
+	        Wage_per_hour=20
+	        Parttime_hour=8
+	        Parttime_Wage=$((Wage_per_hour * Parttime_hour))
+	        echo "Parttime_Wage=" $Parttime_Wage
+		break
+		;;
+	3)
+		echo "not present"
+		break
+		;;
+  esac
+done
